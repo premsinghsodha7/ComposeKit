@@ -4,7 +4,9 @@
         android:allowBackup="true"
         android:label="ComposeKit Demo"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher">
         <activity android:name=".DemoActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
