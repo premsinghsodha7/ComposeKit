@@ -3,6 +3,12 @@
 > Reusable Jetpack Compose building blocks for clear, polished finance interfaces.
 
 ComposeKit is an Android library module plus a runnable demo app. Its components are presentation-only: they do not send payments or persist financial data.
+## App preview
+
+![ComposeKit polished app preview](screenshots/app-preview.jpg)
+
+*Portfolio mockup composed from the current Compose layout and sample content.*
+
 
 ## Components
 
