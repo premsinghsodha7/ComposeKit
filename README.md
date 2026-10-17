@@ -5,9 +5,9 @@
 ComposeKit is an Android library module plus a runnable demo app. Its components are presentation-only: they do not send payments or persist financial data.
 ## App preview
 
-![ComposeKit polished app preview](screenshots/app-preview.jpg)
+![ComposeKit demo running on the Android emulator](screenshots/app-preview.jpg)
 
-*Portfolio mockup composed from the current Compose layout and sample content.*
+*Live screenshot captured from a Pixel 9 Pro emulator running Android 15 (API 35).*
 
 
 ## Components
@@ -16,13 +16,17 @@ ComposeKit is an Android library module plus a runnable demo app. Its components
 - `BalanceSummaryCard` — balance, title, and supporting detail in a themed card.
 - `AmountField` — currency-labelled decimal input with validation feedback.
 - `TransactionSummaryRow` — compact transaction title, date, and signed amount.
-- `ComposeKitTheme` and `ComposeKitColors` — a small reusable color foundation.
+- `BudgetProgressCard` and `SpendingCategoryRow` — budget and category progress.
+- `TransferStatusCard` and `FeeBreakdownCard` — payment outcomes and transparent fees.
+- `PaymentCardPreview` and `FinancialAccountRow` — card and linked-account presentation.
+- `TransactionCategoryChip` — selectable transaction filters.
+- `ComposeKitTheme` — Ocean, Garden, and Midnight color palettes.
 
 ## Run the demo
 
 Open the repository in Android Studio, select the `demo` run configuration, and run it on an emulator or device with API 24+. Or use `./gradlew :demo:installDebug` with a connected device.
 
-The demo screen shows each component together, including amount validation and a loading-state example. All sample values are fictional.
+The demo has Home, Kit, and Theme screens. Browse the component catalog, try amount validation, and switch among three palettes. All sample values are fictional.
 
 ## Use the library in another app
 
