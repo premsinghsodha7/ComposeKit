@@ -50,9 +50,9 @@ enum class ComposeKitPalette { Ocean, Garden, Midnight }
 @Composable
 fun ComposeKitTheme(palette: ComposeKitPalette = ComposeKitPalette.Ocean, content: @Composable () -> Unit) {
     val scheme = when (palette) {
-        ComposeKitPalette.Ocean -> lightColorScheme(primary = ComposeKitColors.Navy, secondary = ComposeKitColors.Mint, background = ComposeKitColors.Canvas, surface = Color.White, onBackground = ComposeKitColors.Ink, onSurface = ComposeKitColors.Ink)
-        ComposeKitPalette.Garden -> lightColorScheme(primary = Color(0xFF42664B), secondary = Color(0xFFDCE8D4), background = Color(0xFFF5F6EE), surface = Color.White, onBackground = Color(0xFF222A23), onSurface = Color(0xFF222A23))
-        ComposeKitPalette.Midnight -> androidx.compose.material3.darkColorScheme(primary = Color(0xFF8EDDB6), secondary = Color(0xFF355A51), background = Color(0xFF101B20), surface = Color(0xFF1C2A30), onBackground = Color(0xFFE6EEF0), onSurface = Color(0xFFE6EEF0))
+        ComposeKitPalette.Ocean -> lightColorScheme(primary = ComposeKitColors.Navy, secondary = ComposeKitColors.Mint, primaryContainer = Color(0xFFDCE9EC), onPrimaryContainer = ComposeKitColors.Navy, secondaryContainer = Color(0xFFDDF3E7), onSecondaryContainer = ComposeKitColors.Navy, background = ComposeKitColors.Canvas, surface = Color.White, onBackground = ComposeKitColors.Ink, onSurface = ComposeKitColors.Ink)
+        ComposeKitPalette.Garden -> lightColorScheme(primary = Color(0xFF42664B), secondary = Color(0xFFDCE8D4), primaryContainer = Color(0xFFDCE8D4), onPrimaryContainer = Color(0xFF222A23), secondaryContainer = Color(0xFFDCE8D4), onSecondaryContainer = Color(0xFF222A23), background = Color(0xFFF5F6EE), surface = Color.White, onBackground = Color(0xFF222A23), onSurface = Color(0xFF222A23))
+        ComposeKitPalette.Midnight -> androidx.compose.material3.darkColorScheme(primary = Color(0xFF8EDDB6), secondary = Color(0xFF355A51), primaryContainer = Color(0xFF28453C), onPrimaryContainer = Color(0xFFE6EEF0), secondaryContainer = Color(0xFF355A51), onSecondaryContainer = Color(0xFFE6EEF0), background = Color(0xFF101B20), surface = Color(0xFF1C2A30), onBackground = Color(0xFFE6EEF0), onSurface = Color(0xFFE6EEF0))
     }
     MaterialTheme(
         colorScheme = scheme,
