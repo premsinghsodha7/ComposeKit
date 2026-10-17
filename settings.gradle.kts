@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ComposeKit"
-include(":composekit")
+include(":composekit", ":demo")

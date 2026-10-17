@@ -1,18 +1,26 @@
 # ComposeKit
 
-> A small, reusable Jetpack Compose component library for polished Android finance interfaces.
+> Reusable Jetpack Compose building blocks for clear, polished finance interfaces.
 
-ComposeKit collects focused UI building blocks for apps that need clear money entry and confident primary actions. The first release provides a branded action button, a balance summary card, and an amount field with a semantic label. Components are deliberately presentation-only: they do not send payments or store financial data.
+ComposeKit is an Android library module plus a runnable demo app. Its components are presentation-only: they do not send payments or persist financial data.
 
 ## Components
 
 - `PrimaryActionButton` — full-width action with enabled and loading states.
-- `BalanceSummaryCard` — accessible title, amount, and supporting detail.
-- `AmountField` — decimal amount input with explicit currency label.
+- `BalanceSummaryCard` — balance, title, and supporting detail in a themed card.
+- `AmountField` — currency-labelled decimal input with validation feedback.
+- `TransactionSummaryRow` — compact transaction title, date, and signed amount.
+- `ComposeKitTheme` and `ComposeKitColors` — a small reusable color foundation.
 
-## Add the library
+## Run the demo
 
-Open the repository in Android Studio, then include `:composekit` in your Android project's settings and add it as a dependency:
+Open the repository in Android Studio, select the `demo` run configuration, and run it on an emulator or device with API 24+. Or use `./gradlew :demo:installDebug` with a connected device.
+
+The demo screen shows each component together, including amount validation and a loading-state example. All sample values are fictional.
+
+## Use the library in another app
+
+Include this repository as a Gradle project and add the module dependency:
 
 ```kotlin
 dependencies {
@@ -20,20 +28,26 @@ dependencies {
 }
 ```
 
-The host app must enable Compose and include the Compose Material 3 dependencies. The library targets Android API 24+ and uses JDK 17.
-
-## Example
+The host app must enable Compose and include Compose Material 3. For example:
 
 ```kotlin
 PrimaryActionButton(
     text = "Continue",
-    onClick = { /* handle in the host app */ }
+    onClick = { /* handle the action in the host app */ }
 )
 ```
 
+## Build and tests
+
+- Kotlin 2.0.21, Compose, Material 3
+- Android Gradle Plugin 8.7.3, Gradle 8.9, JDK 17
+- minSdk 24, targetSdk 35
+- `./gradlew testDebugUnitTest :demo:assembleDebug`
+- GitHub Actions runs unit tests and assembles the demo app on pushes and pull requests.
+
 ## Scope
 
-This is an early portfolio starter. Planned work includes Compose previews, UI tests, typography/color tokens, dark theme variants, and usage examples. No real financial service integration is included.
+This is a portfolio component library, not a financial service. Components do not process payments, store customer data, or connect to a backend.
 
 ## License
 
