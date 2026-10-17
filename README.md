@@ -7,7 +7,7 @@
 ComposeKit is an Android library module plus a runnable demo app. Its components are presentation-only: they do not send payments or persist financial data.
 ## App preview
 
-![ComposeKit demo running on the Android emulator](screenshots/app-preview.jpg)
+![ComposeKit demo running on the Android emulator](https://raw.githubusercontent.com/premsinghsodha7/ComposeKit/main/screenshots/app-preview.jpg)
 
 *Live screenshot captured from a Pixel 9 Pro emulator running Android 15 (API 35).*
 
